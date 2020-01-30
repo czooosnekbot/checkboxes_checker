@@ -3,12 +3,12 @@ const groupId = document.querySelectorAll('#groupId')
 
 groupToggler.addEventListener('click', (e) => {
     if (groupToggler.checked) {
-        for (i=0;i<=(groupId.length - 1);i++) {
-            groupId[i].checked = true
-        }
+        groupId.forEach(function (checkbox) {
+            checkbox.checked = true
+        })
     } else {
-        for (i=0;i<=(groupId.length - 1);i++) {
-            groupId[i].checked = false
-        }
+        groupId.forEach(function (checkbox) {
+            checkbox.checked = false
+        })
     }
 })
